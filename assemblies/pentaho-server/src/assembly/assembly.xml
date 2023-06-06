@@ -73,9 +73,9 @@
       <outputDirectory>.</outputDirectory>
     </fileSet>
 
-    <!-- copy solutions hsqldb files into pentaho-solutions/system -->
+    <!-- copy solutions h2 files into pentaho-solutions/system -->
     <fileSet>
-      <directory>${project.build.directory}/pentaho-solutions/system/dialects/hsqldb</directory>
+      <directory>${project.build.directory}/pentaho-solutions/system/dialects/h2</directory>
       <outputDirectory>pentaho-solutions/system</outputDirectory>
     </fileSet>
   </fileSets>
@@ -150,7 +150,7 @@
     <dependencySet>
       <includes>
         <include>commons-logging:commons-logging</include>
-        <include>org.hsqldb:hsqldb</include>
+        <!--<include>org.hsqldb:hsqldb</include>-->
         <include>mysql:mysql-connector-java</include>
         <include>com.h2database:h2</include>
         <include>org.postgresql:postgresql</include>

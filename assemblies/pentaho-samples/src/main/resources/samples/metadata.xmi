@@ -2047,7 +2047,7 @@
           value = 'N'/>
         <CWM:TaggedValue xmi.id = 'a714' tag = 'DATABASE_ATTRIBUTE_PREFIX_MAXIMUM_POOL_SIZE'
           value = '10'/>
-        <CWM:TaggedValue xmi.id = 'a715' tag = 'DATABASE_JDBC_URL' value = 'jdbc:hsqldb:hsql://localhost:/SampleData'/>
+        <CWM:TaggedValue xmi.id = 'a715' tag = 'DATABASE_JDBC_URL' value = 'jdbc:h2:../../data/h2/sampledata'/>
       </CWM:ModelElement.taggedValue>
     </CWMRDB:Catalog>
     <CWM:Description xmi.id = 'a716' name = 'mask' body = 'MM-dd-yyyy' type = 'String'>

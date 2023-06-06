@@ -163,7 +163,7 @@
     <entry name="org.jfree.report.modules.output.table.html.EmptyCellsUseCSS" value="true"/>
   </report-config>
   <hibernate>
-	  <hibernateConfigPath>system/hibernate/hsql.hibernate.cfg.xml</hibernateConfigPath>
+	  <hibernateConfigPath>system/hibernate/h2.hibernate.cfg.xml</hibernateConfigPath>
 	  <!--
 	  *
 	  * hibernateManaged should be set to true if running the BI Platform

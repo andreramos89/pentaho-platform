@@ -8,10 +8,10 @@
 		location="jdbc/HibernateDS"
 		xa-location="jdbc/xa/HibernateDS"
 		ejb-location="jdbc/Hibernate"
-		connection-driver="org.hsqldb.jdbcDriver"
+		connection-driver="org.h2.Driver"
 		username="hibuser"
 		password="password"
-		url="jdbc:hsqldb:hsql://localhost/hibernate"
+		url="jdbc:h2:../../data/h2/hibernate"
 		inactivity-timeout="30"
 	/>
 	<data-source
@@ -20,10 +20,10 @@
 		location="jdbc/SampleDataDS"
 		xa-location="jdbc/xa/SampleDataDS"
 		ejb-location="jdbc/SampleData"
-		connection-driver="org.hsqldb.jdbcDriver"
+		connection-driver="org.h2.Driver"
 		username="pentaho_user"
 		password="password"
-		url="jdbc:hsqldb:hsql://localhost/sampledata"
+		url="jdbc:h2:../../data/h2/sampledata"
 		inactivity-timeout="30"
 	/>
 	<data-source
@@ -32,10 +32,10 @@
 		location="jdbc/QuartzDS"
 		xa-location="jdbc/xa/QuartzDS"
 		ejb-location="jdbc/Quartz"
-		connection-driver="org.hsqldb.jdbcDriver"
+		connection-driver="org.h2.Driver"
 		username="pentaho_user"
 		password="password"
-		url="jdbc:hsqldb:hsql://localhost/quartz"
+		url="jdbc:h2:../../data/h2/quartz"
 		inactivity-timeout="30"
 	/>
 	<data-source
@@ -44,10 +44,10 @@
 		location="jdbc/SharkDS"
 		xa-location="jdbc/xa/SharkDS"
 		ejb-location="jdbc/Shark"
-		connection-driver="org.hsqldb.jdbcDriver"
+		connection-driver="org.h2.Driver"
 		username="sa"
 		password=""
-		url="jdbc:hsqldb:hsql://localhost/shark"
+		url="jdbc:h2:../../data/h2/shark"
 		inactivity-timeout="30"
 	/>
 </data-sources>

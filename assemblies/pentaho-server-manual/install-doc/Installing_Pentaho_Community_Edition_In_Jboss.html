@@ -41,15 +41,14 @@
 <h2 id="Install_JDBC_driver_as_a_module">7.  Installing JDBC driver as a module</h2>
 <ul>
 <li>Go to your JBoss home directory (called later &lt;JBossHome&gt;), then the modules folder.</li>
-<li>Create a simple nested folders structure: org\hsqldb\main</li>
-<li>Open &lt;JBossHome&gt;/modules/org/hsqldb/main</li>
-<li>Download the 1.8.0 version of hsqldb jar.</li>
-<li>Create a file named module.xml with following content</li>
+<li>Create a simple nested folders structure: org\h2\main</li>
+<li>Open &lt;JBossHome&gt;/modules/org/h2/main</li>
+<li>Download the 2.1.214 version of h2 jar.</li>
 <div class="highlight">
 <pre class='brush: xml;'>
-&lt;module xmlns="urn:jboss:module:1.0" name="org.hsqldb"&gt;
+&lt;module xmlns="urn:jboss:module:1.0" name="org.h2"&gt;
    &lt;resources&gt;
-      &lt;resource-root path="hsqldb-1.8.0.jar"/&gt;
+      &lt;resource-root path="h2-2.1.214.jar"/&gt;
    &lt;/resources&gt;
    &lt;dependencies&gt;
       &lt;module name="javax.api"/&gt;
@@ -59,8 +58,8 @@
 </pre>
 </div>
 <li>There should be two files in the main folder now.</li>
-<code>&lt;JBossHome&gt;/modules/org/hsqldb/main/hsqldb-1.8.0.jar<br />
-&lt;JBossHome&gt;/modules/org/hsqldb/main/module.xml</code></p>
+<code>&lt;JBossHome&gt;/modules/org/h2/main/h2-2.10.214.jar<br />
+&lt;JBossHome&gt;/modules/org/h2/main/module.xml</code></p>
 </ul>
 
 <h2 id="Enable_Jboss_Classloader">8.  Enable JBoss classloader to load classes from Sun JDK</h2>
@@ -107,13 +106,13 @@
 <pre class='brush: xml;'>
                 &lt;datasource jndi-name="java:jboss/datasources/Hibernate" pool-name="hibpool" enabled="true" jta="true" use-java-context="true" use-ccm="true"&gt;
                     &lt;connection-url&gt;
-                        jdbc:hsqldb:hsql://localhost/hibernate
+                        jdbc:h2:../../data/h2/hibernate
                     &lt;/connection-url&gt;
                     &lt;driver-class&gt;
-                        org.hsqldb.jdbcDriver
+                        org.h2.Driver
                     &lt;/driver-class&gt;
                     &lt;driver&gt;
-                        hsqldb
+                        h2
                     &lt;/driver&gt;
                     &lt;pool&gt;
                         &lt;prefill&gt;
@@ -137,13 +136,13 @@
                 &lt;/datasource&gt;
                 &lt;datasource jndi-name="java:jboss/datasources/Quartz" pool-name="quartzpool" enabled="true" jta="true" use-java-context="true" use-ccm="true"&gt;
                     &lt;connection-url&gt;
-                        jdbc:hsqldb:hsql://localhost/quartz
+                        jdbc:h2:../../data/h2/quartz
                     &lt;/connection-url&gt;
                     &lt;driver-class&gt;
-                        org.hsqldb.jdbcDriver
+                        org.h2.Driver
                     &lt;/driver-class&gt;
                     &lt;driver&gt;
-                        hsqldb
+                        h2
                     &lt;/driver&gt;
                     &lt;pool&gt;
                         &lt;prefill&gt;
@@ -168,12 +167,12 @@
 
 </pre>
 </div>
-<li> Now add the hsqldb driver definition in the driver section of the file. </li>
+<li> Now add the h2 driver definition in the driver section of the file. </li>
 <div class="highlight">
 <pre class='brush: xml;'>
-                    &lt;driver name="hsqldb" module="org.hsqldb"&gt;
+                    &lt;driver name="h2" module="org.h2"&gt;
                         &lt;driver-class&gt;
-                            org.hsqldb.jdbcDriver
+                            org.h2.Driver
                         &lt;/driver-class&gt;
                     &lt;/driver&gt;
 </pre>

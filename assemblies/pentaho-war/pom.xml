@@ -11,7 +11,7 @@
   <version>9.6.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
-    <rdbms>hsqldb</rdbms>
+    <rdbms>h2</rdbms>
     <commons-database.version>9.6.0.0-SNAPSHOT</commons-database.version>
     <prepared.war.directory>${pentaho-server.directory}/tomcat/webapps/pentaho</prepared.war.directory>
     <pentaho-hadoop-shims.version>9.6.0.0-SNAPSHOT</pentaho-hadoop-shims.version>

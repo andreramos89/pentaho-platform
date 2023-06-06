@@ -3,14 +3,14 @@
 	<Resource name="jdbc/Hibernate" auth="Container" type="javax.sql.DataSource"
 		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0" maxIdle="5" initialSize="0"
 		maxWait="10000" username="hibuser" password="password"
-		driverClassName="org.h2.Driver" url="jdbc:h2:../../pentaho-solutions/system/hibernate/hibernate"
+		driverClassName="org.h2.Driver" url="jdbc:h2:../../data/h2/hibernate"
 		validationQuery="select count(*) from INFORMATION_SCHEMA.USERS" />
 		
 	<Resource name="jdbc/Quartz" auth="Container" type="javax.sql.DataSource"
 		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0" maxIdle="5" initialSize="0"
 		maxWait="10000" username="sa" password="" testOnBorrow="true"
-		driverClassName="org.h2.Driver" url="jdbc:h2:../../pentaho-solutions/quartz/quartz"
-		validationQuery="select count(*) from INFORMATION_SCHEMA.USERS"/>
+		driverClassName="org.h2.Driver" url="jdbc:h2:../../data/h2/quartz"
+		validationQuery="select count(*) from QRTZ5_CALENDARS"/>
 
 	<Resource name="jdbc/jackrabbit" auth="Container" type="javax.sql.DataSource"
 		factory="org.pentaho.di.core.database.util.DecryptingDataSourceFactory" maxActive="20" minIdle="0"

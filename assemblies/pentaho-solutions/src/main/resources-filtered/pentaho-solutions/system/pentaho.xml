@@ -129,7 +129,7 @@
   <sampledata-datasource>
 	  <name>SampleData</name>
 	  <host>localhost</host>
-	  <type>Hypersonic</type>
+	  <type>H2</type>
 	  <port>9001</port>
 	  <access>NATIVE</access>
 	  <username>pentaho_user</username>
